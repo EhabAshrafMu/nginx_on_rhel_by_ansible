@@ -18,10 +18,10 @@
         state: enabled
         immediate: yes
 
-    - name: Install nginx #installing apache using the builtin module of ansible. Yum because we are in a rhel environment. Apt for debian.
+    - name: Install nginx #installing nginx e using the builtin module of ansible. Yum because we are in a rhel environment. Apt for debian.
       ansible.builtin.yum:
         name: nginx #the name of the nginx server in rhel.
-        state: present #it means if it's availbe on the server, don't install. If it's not avaialbe, it will install the latest. 
+        state: present #it means if it's availablee on the server, don't install. If it's not avaialbe, it will install the latest. 
         update_cache: yes # update the repo chache
           
     - name: Deploy nginx config template #use the jinja2 template to write the configuration file for nginx.
